@@ -1,31 +1,11 @@
 -- phpMyAdmin SQL Dump
 -- version 5.1.0
 -- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Generation Time: May 16, 2021 at 10:30 AM
--- Server version: 10.4.18-MariaDB
--- PHP Version: 7.4.16
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `doanweb2`
---
-
--- --------------------------------------------------------
-
---
--- Table structure for table `chitietgiamgia`
---
 
 CREATE TABLE `chitietgiamgia` (
   `ID_CTGG` int(5) UNSIGNED NOT NULL,
@@ -267,8 +247,8 @@ CREATE TABLE `chuongtrinhgiamgia` (
 --
 
 INSERT INTO `chuongtrinhgiamgia` (`MA_CTGG`, `TEN_CHUONG_TRINH`, `LOAI_CHUONG_TRINH`, `ND_GIAM_GIA`, `PHAN_TRAM_GIAM_GIA`, `NGAY_BAT_DAU`, `NGAY_KET_THUC`) VALUES
-(1, 'Săn Sale 5-5', 'Giảm Giá Sản Phẩm', 'Giảm 10% cho các Sản Phẩm Ra Mắt Trong Tháng 5', 0.1, '2021-04-30 12:27:21', '2021-05-20 12:27:21'),
-(2, 'Sản Phẩm Biểu Tượng', 'Giảm Giá Sản Phẩm', 'Giảm Giá 20% cho các Sản Phẩm Giá Từ 750000 VNĐ khi khách hàng mua >= 3 sản phẩm ', 0.2, '2021-01-09 12:49:49', '2021-05-04 07:49:49');
+(1, 'Săn Sale 11-11', 'Giảm Giá Sản Phẩm', 'Giảm 10% cho các Sản Phẩm Ra Mắt Trong Tháng 11', 0.1, '2021-11-11 12:27:21', '2021-11-20 12:27:21'),
+(2, 'Sản Phẩm Biểu Tượng', 'Giảm Giá Sản Phẩm', 'Giảm Giá 20% cho các Sản Phẩm Giá Từ 750000 VNĐ khi khách hàng mua >= 3 sản phẩm ', 0.2, '2021-11-09 12:49:49', '2021-11-11 07:49:49');
 
 -- --------------------------------------------------------
 
@@ -292,8 +272,7 @@ INSERT INTO `danhmuc` (`MA_DANH_MUC`, `TEN_DANH_MUC`) VALUES
 (4, 'Quản Lý  Nhập Hàng'),
 (5, 'Quản Lý Khách Hàng'),
 (6, 'Quản Lý Giảm Giá'),
-(7, 'Quản Lý  Phân Quyền'),
-(8, 'ABC');
+(7, 'Quản Lý  Phân Quyền');
 
 -- --------------------------------------------------------
 
@@ -337,13 +316,13 @@ CREATE TABLE `hoadon` (
 --
 
 INSERT INTO `hoadon` (`MA_HD`, `MA_NV`, `MA_KH`, `DIA_CHI`, `SODIENTHOAI`, `TINH_TRANG`, `TONG_TIEN`, `NGAY_LAP`) VALUES
-(1, 1, 1, 'B14/12 ấp 2 xã Tân Quý Tây', '0707624367', 1, 480000, '0000-00-00 00:00:00'),
-(2, NULL, 1, 'H.Bình Chánh ,tp HCM', '0707624367', 0, 2850000, '2021-05-15 11:22:30'),
-(3, NULL, 1, 'H.Bình Chánh ,tp HCM', '0707624367', 0, 600000, '2021-05-15 11:23:44'),
-(4, NULL, 1, 'H.Bình Chánh ,tp HCM', '0707624367', 0, 1400000, '2021-05-15 11:24:47'),
-(6, NULL, 1, 'B14/12 ấp 2 H.Bình Chánh ,tp HCM', '0707624367', 0, 400000, '2021-05-16 01:37:08'),
-(7, NULL, 1, 'B14/12 ấp 2 H.Bình Chánh ,tp HCM', '0707624367', 0, 600000, '2021-05-16 01:42:35'),
-(8, 1, 4, 'HCM', '0899623648', 1, 700000, '0000-00-00 00:00:00');
+(1, 1, 1, 'HCM', '098888888', 1, 480000, '2021-11-15 11:22:30'),
+(2, NULL, 1, 'H.Bình Chánh ,tp HCM', '098888888', 0, 2850000, '2021-11-15 11:22:30'),
+(3, NULL, 1, 'H.Bình Chánh ,tp HCM', '098888888', 0, 600000, '2021-11-15 11:23:44'),
+(4, NULL, 1, 'H.Bình Chánh ,tp HCM', '098888888', 0, 1400000, '2021-11-15 11:24:47'),
+(6, NULL, 1, 'HCM', '098888888', 0, 400000, '2021-11-16 01:37:08'),
+(7, NULL, 1, ' HCM', '098888888', 0, 600000, '2021-11-16 01:42:35'),
+(8, 1, 4, 'HCM', '098888888', 1, 700000, '2021-11-15 11:22:30');
 
 -- --------------------------------------------------------
 
@@ -366,9 +345,9 @@ CREATE TABLE `khachhang` (
 --
 
 INSERT INTO `khachhang` (`MA_KH`, `MA_TK`, `TEN_KH`, `EMAIL`, `PHONE`, `GIOI_TINH`, `DIA_CHI`) VALUES
-(1, 2, 'Nguyễn Đức Minh Trung', 'minhtrung4367@gmail.com', '0707624367', '1', 'B14/12 ấp 2 H.Bình Chánh ,tp HCM'),
-(3, 4, 'aaa', 'minhtrungaaa@gmail.com', '', '', NULL),
-(4, 5, 'Trần Đại Nam', 'abc@gmail.com', '0899623648', 'Nam', 'HCM');
+(1, 4, 'Hồng Quang Thành', 'thanh@gmail.com', '098888888', '1', 'HCM'),
+(3, 5, 'Mai Thanh An', 'an@gmail.com', '098888888', '1', 'HN'),
+(4, 6, 'Mai Sơn Tùng', 'tung@gmail.com', '098888888', 'Nam', 'HCM');
 
 -- --------------------------------------------------------
 
@@ -390,7 +369,8 @@ CREATE TABLE `nhanvien` (
 --
 
 INSERT INTO `nhanvien` (`MA_NV`, `MA_TK`, `TEN_NV`, `EMAIL`, `PHONE`, `GIOI_TINH`) VALUES
-(1, 4, 'Nguyễn Đức Minh Trung', 'minhtrung@gmail.com', '0707624367', 'Nam');
+(1, 2, 'Đinh Hữu Điểm', 'diem@gmail.com', '098888888', 'Nam'),
+(2, 3, 'Đặng Nguyễn Anh Tú', 'tu@gmail.com', '098888888', 'Nam');
 
 -- --------------------------------------------------------
 
@@ -602,10 +582,11 @@ CREATE TABLE `taikhoan` (
 
 INSERT INTO `taikhoan` (`MA_TK`, `MA_GROUP_QUYEN`, `TEN_DANG_NHAP`, `MAT_KHAU`, `STATUS`, `EMAIL`) VALUES
 (1, 1, 'admin', 'admin', 1, ''),
-(2, 3, 'Nguyễn Đức Minh Trung', 'e10adc3949ba59abbe56e057f20f883e', 1, 'minhtrung4367@gmail.com'),
-(3, 2, 'Minh Trung', 'nhanvien', 1, 'minhtrung@gmail.com'),
-(4, 3, 'aaa', 'e10adc3949ba59abbe56e057f20f883e', 1, 'minhtrungaaa@gmail.com'),
-(5, 3, 'Trần Đại Nam', 'e10adc3949ba59abbe56e057f20f883e', 1, 'abc@gmail.com');
+(2, 2, 'Đinh Hữu Điểm', 'nhanvien', 1, 'diem@gmail.com'),
+(3, 2, 'Đặng Nguyễn Anh Tú', 'nhanvien', 1, 'tu@gmail.com'),
+(4, 3, 'Hồng Quang Thành', 'quanthanh', 1, 'thanh@gmail.com'),
+(5, 3, 'Mai Thanh An', 'thanhan', 1, 'an@gmail.com'),
+(6, 3, 'Mai Sơn Tùng', 'sontung', 1, 'tung@gmail.com');
 
 --
 -- Indexes for dumped tables
@@ -828,7 +809,3 @@ ALTER TABLE `phieunhap`
 ALTER TABLE `taikhoan`
   ADD CONSTRAINT `taikhoan_ibfk_1` FOREIGN KEY (`MA_GROUP_QUYEN`) REFERENCES `groupquyen` (`MA_GROUP_QUYEN`);
 COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

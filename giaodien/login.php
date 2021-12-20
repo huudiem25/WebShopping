@@ -90,12 +90,13 @@
 		  		alert("Đăng Nhập Thành Công! Chúc Quý Khách Mua Hàng Thật Vui Vẻ");
           window.location="../index.php";
 		  	}
+       
         else {
+		  		error.html("Email hoặc mật khẩu không chính xác !");
+		  	}
+        if (response == 0) {
           error.html("Tài Khoản đã bị Khoá");
-        }//alert(response);
-        // else {
-		  	// 	error.html("Email hoặc mật khẩu không chính xác !");
-		  	// }
+        }
         
       
             }
